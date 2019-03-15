@@ -1,0 +1,56 @@
+<div class="nav-container">
+  <div class="menu">
+    <ul class="listview">
+      <ng-container *ngFor="let group of navigationList">
+        <li *ngIf="group.groupName" class="listitem-divider" [ngClass]="{'transparent': submenus}">{{group.groupName}}</li>
+        <li class="listitem" [ngClass]="{'active': list.active}" *ngFor="let
+          list of group.listItems">
+          <div *ngIf="list.active" class="active-tab"></div>
+          <ng-container *ngIf="list.children && list.children.length> 0; else
+            nochild">
+            <a href="javascript:void(0)" (click)="forwardSubmenu(list.children, list)">
+              <em [ngClass]="list.icon"></em>
+              <span *ngIf="!submenus">{{list.name}}</span>
+            </a>
+            <em class="counter" *ngIf="!submenus">{{list.children.length}}</em>
+          </ng-container>
+          <ng-template #nochild>
+            <a href="javascript:void(0)"  (click)="onSelect(list)">
+              <em [ngClass]="list.icon"></em>
+              <span *ngIf="!submenus">{{list.name}}</span>
+            </a>
+          </ng-template>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="menu submenu" [ngClass]="{'active': submenus}">
+    <ul class="listview">
+      <li class="submenu-header" >
+        <em class="anti-counter" (click)="backwardSubmenu()"></em>
+        <a class="btn-next btn-fullwidth">
+          <em class=""></em>
+          <span>{{menuTitle}}</span>
+        </a>
+      </li>
+      <li class="listitem" *ngFor="let list of submenus" [ngClass]="{'active':
+        list.active}">
+        <ng-container *ngIf="list.children && list.children.length> 0; else
+          nograndchild">
+          <a class="btn-next btn-fullwidth"
+            (click)="forwardSubmenu(list.children, list)">
+            <em [ngClass]="list.icon"></em>
+            <span>{{list.name}}</span>
+          </a>
+          <em class="counter">{{list.children.length}}</em>
+        </ng-container>
+        <ng-template #nograndchild>
+          <a href="javascript:void(0)" (click)="onSelect(list)">
+            <em [ngClass]="list.icon"></em>
+            <span>{{list.name}}</span>
+          </a>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</div>

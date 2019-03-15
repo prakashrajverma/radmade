@@ -1,0 +1,25 @@
+.sidebar-footer {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  display: flex;
+  box-shadow: 0 -1px 5px #131212;
+  border-top: 1px solid #3a3a3a;
+  .footer-item {
+    flex-grow: 1;
+    text-align: center;
+    a {
+      text-align: center;
+      line-height: 30px;
+      color: #bdbdbd;
+    }
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+.badge-pill {
+  position: absolute;
+  top: 0;
+}

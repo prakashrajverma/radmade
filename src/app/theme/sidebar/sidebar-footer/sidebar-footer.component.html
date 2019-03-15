@@ -1,0 +1,21 @@
+<div class="sidebar-footer">
+    <div class="footer-item">
+      <a href="javascript:void(0)" (click)="showNotification = !showNotification">
+        <em class="fa fa-bell"></em>
+        <span class="badge badge-pill badge-warning">5</span>
+      </a>
+      <th-notification-peek [show]="showNotification" (showing)="showNotification = $event"></th-notification-peek>
+    </div>
+    <div class="footer-item">
+      <a href="javascript:void(0)" (click)="showMessage = !showMessage">
+        <em class="fa fa-envelope"></em>
+        <span class="badge badge-pill badge-success">7</span>
+      </a>
+      <th-message-peek [show]="showMessage" (showing)="showMessage = $event"></th-message-peek>
+    </div>
+    <div class="footer-item">
+      <a href="javascript:void(0)" (click)="show= !show">
+        <em class="fa fa-power-off"></em>
+      </a>
+    </div>
+  </div>

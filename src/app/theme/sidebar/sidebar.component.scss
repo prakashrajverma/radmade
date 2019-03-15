@@ -1,0 +1,42 @@
+.sidebar {
+  width: 220px;
+  height: 100%;
+  max-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: left 0.3s ease;
+  background-color: #1d1d1d;
+  box-shadow: 1px 0px 5px 5px #9b9999;
+}
+.sidebar.sidebar-bg {
+  background-image: url(./../../../assets/sidebar-bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sidebar.sidebar-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(29, 29, 29, 0.8);
+}
+.sidebar-content {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  max-height: calc(100% - 30px);
+  height: calc(100% - 30px);
+
+  }
+
+
+
+
+
