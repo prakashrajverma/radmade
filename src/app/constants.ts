@@ -21,7 +21,7 @@ export const constants = {
     {id: 'g1-l3-c5', name: 'ledger', icon: null, route: null, children: null},
     {id: 'g1-l3-c6', name: 'rack report', icon: null, route: null, children: null},
   ]},
-    {id: 'nvg0-nvl4', name: 'Mater', route: null, icon: 'far fa-file-alt', children: null},
+    {id: 'nvg0-nvl4', name: 'Master', route: null, icon: 'far fa-file-alt', children: null},
   ]},
     {groupId: 'nvg1', groupName: 'others', listItems: [
       {id: 'nvg0-nvl4', name: 'Role', route: null, icon: 'far fa-file-alt', children: null},

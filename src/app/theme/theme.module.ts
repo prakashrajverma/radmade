@@ -11,7 +11,13 @@ import { SidebarNavComponent } from './sidebar/sidebar-nav/sidebar-nav.component
   imports: [
     CommonModule
   ],
-  declarations: [SidebarComponent, MessagePeekComponent, NotificationPeekComponent, SidebarFooterComponent, SidebarHeaderComponent, SidebarNavComponent],
+  declarations: [
+    SidebarComponent,
+    MessagePeekComponent,
+    NotificationPeekComponent,
+    SidebarFooterComponent,
+    SidebarHeaderComponent,
+    SidebarNavComponent],
   exports: [SidebarComponent]
 })
 export class ThemeModule { }
