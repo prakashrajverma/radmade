@@ -1,5 +1,7 @@
-import { constants } from './../../../constants';
+import { NavigationGroup } from './../../core/navigation-group';
+import { ApplicationBuilderService } from '../../core/application-builder.service';
 import { Component, OnInit } from '@angular/core';
+import { navigation } from 'src/app/navigation-constant';
 
 @Component({
   selector: 'th-sidebar-nav',
@@ -8,17 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarNavComponent implements OnInit {
 
-  public navigationList: any;
+  public navigationGroups: NavigationGroup[];
   public menuTitle!: string;
   public menuArray: any[] = [];
 
   public activeItem: any;
-  constructor() { }
+  constructor(private readonly applicationService: ApplicationBuilderService) { }
 
   public ngOnInit(): void {
-    this.navigationList = constants.navGroup;
-    this.activeItem = this.navigationList[0].listItems[0];
+    this.navigationGroups = navigation;
+    this.activeItem = this.navigationGroups[0].navigations[0];
     this.activeItem.active = true;
+    this.loadActiveApplication(this.activeItem.metadata);
   }
 
   public forwardSubmenu(menus: any, parent: any): any {
@@ -30,11 +33,17 @@ export class SidebarNavComponent implements OnInit {
   public onSelect(item: any): void {
     this.activeItem.active = false;
     if (this.menuArray.length > 0) {
-      this.activeItem =  this.menuArray[0].parent;
+      this.activeItem = this.menuArray[0].parent;
     } else {
       this.activeItem = item;
     }
     this.activeItem.active = true;
+    this.loadActiveApplication(item.metadata);
+  }
+
+  private loadActiveApplication(metadata: any) {
+    this.applicationService
+    .loadApplication({ url: metadata.url, title: metadata.title });
   }
   public get submenus(): any {
     const length = this.menuArray.length;

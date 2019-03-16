@@ -1,0 +1,6 @@
+<iframe #frame
+  *ngIf="application"
+  style="height:100%; width: 100%;"
+  offsetHeight="5"
+  [src]="application?.url | safeUrl"
+  [title]="application?.title"></iframe>

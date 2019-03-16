@@ -1,3 +1,4 @@
+import { NavigationGroup, Navigationfilter } from './core/navigation-group';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

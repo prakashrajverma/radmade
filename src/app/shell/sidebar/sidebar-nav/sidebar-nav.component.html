@@ -1,23 +1,23 @@
 <div class="nav-container">
   <div class="menu">
     <ul class="listview">
-      <ng-container *ngFor="let group of navigationList">
-        <li *ngIf="group.groupName" class="listitem-divider" [ngClass]="{'transparent': submenus}">{{group.groupName}}</li>
-        <li class="listitem" [ngClass]="{'active': list.active}" *ngFor="let
-          list of group.listItems">
-          <div *ngIf="list.active" class="active-tab"></div>
-          <ng-container *ngIf="list.children && list.children.length> 0; else
+      <ng-container *ngFor="let group of navigationGroups">
+        <li *ngIf="group.name" class="listitem-divider" [ngClass]="{'transparent': submenus}">{{group.name}}</li>
+        <li class="listitem" [ngClass]="{'active': navigation.active}" *ngFor="let
+          navigation of group.navigations">
+          <div *ngIf="navigation.active" class="active-tab"></div>
+          <ng-container *ngIf="navigation.children && navigation.children.length> 0; else
             nochild">
-            <a href="javascript:void(0)" (click)="forwardSubmenu(list.children, list)">
-              <em [ngClass]="list.icon"></em>
-              <span *ngIf="!submenus">{{list.name}}</span>
+            <a href="javascript:void(0)" (click)="forwardSubmenu(navigation.children, navigation)">
+              <em [ngClass]="navigation.icon"></em>
+              <span *ngIf="!submenus">{{navigation.name}}</span>
             </a>
-            <em class="counter" *ngIf="!submenus">{{list.children.length}}</em>
+            <em class="counter" *ngIf="!submenus">{{navigation.children.length}}</em>
           </ng-container>
           <ng-template #nochild>
-            <a href="javascript:void(0)"  (click)="onSelect(list)">
-              <em [ngClass]="list.icon"></em>
-              <span *ngIf="!submenus">{{list.name}}</span>
+            <a href="javascript:void(0)"  (click)="onSelect(navigation)">
+              <em [ngClass]="navigation.icon"></em>
+              <span *ngIf="!submenus">{{navigation.name}}</span>
             </a>
           </ng-template>
         </li>
