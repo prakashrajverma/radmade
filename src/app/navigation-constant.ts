@@ -11,6 +11,7 @@ export const navigation: NavigationGroup[] = [
         'active': false,
         'children': null,
         'metadata': {
+          'id': '1E2909A2-8407-4FA5-9DC0-F78238EF1CEF',
           'title': 'dashboard',
           'url': 'https://www.google.com/webhp?igu=1'
         }
@@ -28,6 +29,7 @@ export const navigation: NavigationGroup[] = [
         'active': false,
         'children': null,
         'metadata': {
+          'id': 'A3F10D88-958F-4082-B1FF-AE5E7CFE78E1',
           'title': 'purchase',
           'url': 'http://hourly-app.com/'
         }
@@ -45,6 +47,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': '2EF36B3D-9FFB-4C9C-829F-00D30E77778C',
               'title': 'sales',
               'url': 'https://getdooapp.com/'
             }
@@ -56,6 +59,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': '7DDDD048-3956-43FA-BDD5-23D9DBE0525C',
               'title': 'customer',
               'url': 'http://disruptionmag.com/'
             }
@@ -67,6 +71,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': 'E8C0A250-71F7-419C-A49F-876F7B5FBD52',
               'title': 'sales return',
               'url': 'https://koto.studio/'
             }
@@ -81,6 +86,7 @@ export const navigation: NavigationGroup[] = [
         'active': false,
         'children': null,
         'metadata': {
+          'id': 'B14BE0F6-490D-4198-B231-29FAC8178957',
           'title': 'master',
           'url': 'http://www.buildinamsterdam.com/'
         }
@@ -98,6 +104,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': 'BE5D46FF-8BD0-4D27-BBED-E88B0BBF46DF',
               'title': 'invoice report',
               'url': 'https://paystack.com/'
             }
@@ -109,6 +116,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': '537DB236-2216-479E-A660-07FFA6AA087F',
               'title': 'stock report',
               'url': 'https://in-vision.at/'
             }
@@ -126,6 +134,7 @@ export const navigation: NavigationGroup[] = [
                 'active': false,
                 'children': null,
                 'metadata': {
+                  'id': 'EC833590-CA7C-4E1C-8B81-A0AF4E556FEB',
                   'title': 'purchase item report',
                   'url': 'https://mort-modern.losttype.com/'
                 }
@@ -137,6 +146,7 @@ export const navigation: NavigationGroup[] = [
                 'active': false,
                 'children': null,
                 'metadata': {
+                  'id': 'E87A0A65-747A-4B87-A303-EA4FD8305033',
                   'title': 'purchase return report',
                   'url': 'https://montluc.com/#'
                 }
@@ -148,6 +158,7 @@ export const navigation: NavigationGroup[] = [
                 'active': false,
                 'children': null,
                 'metadata': {
+                  'id': 'FB2F198F-0CD4-451B-8842-111500CEEA15',
                   'title': 'supplier receipt report',
                   'url': 'https://identityserver4.readthedocs.io/en/dev/quickstarts/2_resource_owner_passwords.html'
                 }
@@ -162,6 +173,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': '358DFC3E-9628-4AD1-A0C2-0413359E292B',
               'title': 'sale',
               'url': 'https://unterfreiemhimmel.net/en'
             }
@@ -173,6 +185,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': '7CD11EB2-A360-4194-8F6E-CAF853F50BEA',
               'title': 'ledger',
               'url': 'https://www.telerik.com/kendo-angular-ui/getting-started/#toc-project-setup'
             }
@@ -184,6 +197,7 @@ export const navigation: NavigationGroup[] = [
             'active': false,
             'children': null,
             'metadata': {
+              'id': '1142714E-159E-4238-ACBC-BE589B838107',
               'title': 'rack report',
               'url': 'https://sourcemaking.com/design_patterns/'
             }

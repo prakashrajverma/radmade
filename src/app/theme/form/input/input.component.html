@@ -1,0 +1,13 @@
+<ng-template #text>
+  <input type="text" [(ngModel)]="value" class="form-control"
+    (focusout)="focusOut()"
+    [ngClass]="validClass" placeholder="{{placeholder}}">
+</ng-template>
+<input *ngIf="type === 'password'; else text" type="password"
+  [(ngModel)]="value" class="form-control"
+  (focusout)="focusOut()"
+  [ngClass]="validClass" placeholder="{{placeholder}}">
+<div *ngIf="invalid" role="tooltip" class="tooltip show bs-tooltip-bottom">
+  <div class="arrow"></div>
+  <div class="tooltip-inner">{{validation.message}}</div>
+</div>

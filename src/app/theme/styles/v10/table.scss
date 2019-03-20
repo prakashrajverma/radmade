@@ -1,0 +1,40 @@
+.table-box {
+  display: table;
+  width: 100%;
+}
+
+.table.no-border tbody td {
+  border: 0px;
+}
+
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.table td, .table th {
+  border-color: #f3f1f1;
+}
+
+.table thead th, .table th {
+  font-weight: 500;
+}
+
+.table-hover tbody tr:hover {
+  background: #82868f;
+  color: white;
+}
+.table-hover tbody tr:hover a {
+  color: rgb(240, 236, 12);
+  text-decoration: underline;
+}
+.v-middle td, .v-middle th {
+  vertical-align: middle;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

@@ -1,3 +1,4 @@
+import { FeatureModule } from './feature/feature.module';
 import { ShellModule } from './shell/shell.module';
 import { ThemeModule } from './theme/theme.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     ShellModule,
     FlexLayoutModule,
     ThemeModule,
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

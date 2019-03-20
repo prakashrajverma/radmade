@@ -1,0 +1,24 @@
+a:not([href]):not([tabindex]) {
+  color: #007bff;
+  text-decoration: none;
+}
+.page-item .page-link{
+  cursor: pointer;
+}
+.page-item.active .page-link {
+  z-index: 2;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  cursor: default;
+}
+.page-item.active:hover .page-link {
+  color: #fff;
+}
+.page-item.disabled .page-link {
+  color: #868e96;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #ddd;
+  cursor: default;
+}

@@ -7,13 +7,13 @@ import { ApplicationMetadata } from './application-metadata';
 })
 export class ApplicationBuilderService {
 
-  private applicationSource = new BehaviorSubject<ApplicationMetadata>(null);
+  private applicationSource = new BehaviorSubject<string>(null);
 
-  public get application(): Observable<ApplicationMetadata> {
+  public get application(): Observable<string> {
     return this.applicationSource.asObservable();
   }
 
   public loadApplication(app: ApplicationMetadata): void {
-    this.applicationSource.next(app);
+    this.applicationSource.next(app.id);
   }
 }

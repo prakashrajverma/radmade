@@ -1,0 +1,26 @@
+<div class="form-group">
+  <th-input></th-input>
+</div>
+<div class="form-group">
+    <th-input type="password"></th-input>
+  </div>
+<div class="form-group">
+  <th-datepicker></th-datepicker>
+</div>
+<div class="form-group">
+  <th-file [fileExtension]="'jpg,jpeg,logo,icon'"></th-file>
+</div>
+
+<div class="form-group">
+    <th-select [placeholder]="'< -- select country -- >'" [options]="select_group" [(ngModel)]="select">
+    </th-select>
+</div>
+
+<div class="form-group">
+    <th-multi-select [placeholder]="'< -- select country -- >'" [options]="select_group" [(ngModel)]="multiselect">
+      </th-multi-select>
+</div>
+<div class="form-group">
+    <th-checkbox [label]="'Remember me'" [(ngModel)]="checkbox" ></th-checkbox>
+  </div>
+{{value}}

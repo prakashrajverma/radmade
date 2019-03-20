@@ -1,13 +1,9 @@
-import { Component, OnInit, ElementRef, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ElementRef, Input, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Component({
   selector: 'th-message-peek',
   templateUrl: './message-peek.component.html',
-  styleUrls: ['./message-peek.component.scss'],
-  // tslint:disable-next-line:use-host-property-decorator
-  host: {
-    '(document:click)': 'onClick($event)',
-  }
+  styleUrls: ['./message-peek.component.scss']
 })
 export class MessagePeekComponent implements OnInit {
 
@@ -17,6 +13,8 @@ export class MessagePeekComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @HostListener('document:click', ['$event'])
   onClick(event) {
     const inside = this._eref.nativeElement.parentElement.contains(event.target);
     this.show = this.show && inside;

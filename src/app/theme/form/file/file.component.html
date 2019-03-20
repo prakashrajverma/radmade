@@ -1,0 +1,38 @@
+<div id="file-container" [ngClass]="{'form-control-danger' : errors.length > 0}">
+  <ng-container *ngIf="maxFiles === 1; else multi">
+
+    <ng-container *ngIf="value; else novalue">
+        <input type="file"  class="form-control  btn-browse" (change)="onChange($event)" [title]="value">
+        <span >{{value}}</span>
+        <label class="btn  btn-file btn-remove" title="Remove file" (click)="removeFiles()">
+          X
+        </label>
+        <label class="btn btn-file">
+            Change
+        </label>
+    </ng-container>
+
+    <ng-template #novalue>
+      <input type="file" class="form-control btn-browse" (change)="onChange($event)" [title]="placeholder">
+      <span>{{placeholder}}</span>
+      <label class="btn btn-file">
+        Browse
+    </label>
+    </ng-template>
+
+  </ng-container>
+
+  <ng-template #multi>
+    <div class="multi-upload" (click)="openUploadModal()">
+        <span *ngIf="value">{{value}}</span>
+        <span *ngIf="!value">{{placeholder}}</span>
+      <label class="btn btn-default btn-file">
+          Upload
+      </label>
+    </div>
+  </ng-template>
+</div>
+<div *ngIf="errors.length > 0" role="tooltip" class="tooltip show bs-tooltip-bottom">
+  <div class="arrow" style="left: 40px;"></div>
+  <div class="tooltip-inner">{{errors[0]}}</div>
+</div>

@@ -1,0 +1,34 @@
+
+.datepicker-input {
+  background-color: transparent !important;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+.calendar {
+  position: absolute;
+  right: 7px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-link {
+  /*calendar*/
+  border-color: transparent;
+  color: #333 !important;
+}
+.btn-link:focus {
+  /*calendar*/
+  outline: none !important;
+}
+
+.custom-select {
+  /*calendar*/
+  font-size: 15px !important;
+  text-transform: uppercase;
+}
+.custom-select:focus {
+  /*calendar*/
+  border-color: inherit !important;
+  outline: 0;
+  box-shadow: none !important;
+}

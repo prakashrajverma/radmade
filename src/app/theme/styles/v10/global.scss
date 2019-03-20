@@ -1,0 +1,37 @@
+* {
+  outline: none;
+}
+
+body {
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  color: #99abb4;
+  font-weight: 300;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  background: #ffffff;
+}
+section {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a.link {
+  color: #455a64;
+}
+
+a.link:hover, a.link:focus {
+  color: #009efb;
+}
+.pointer{
+  cursor: pointer;
+}

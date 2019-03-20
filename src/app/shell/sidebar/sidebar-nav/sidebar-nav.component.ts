@@ -1,7 +1,8 @@
-import { NavigationGroup } from './../../core/navigation-group';
+import { NavigationGroup, Navigationfilter } from './../../core/navigation-group';
 import { ApplicationBuilderService } from '../../core/application-builder.service';
 import { Component, OnInit } from '@angular/core';
 import { navigation } from 'src/app/navigation-constant';
+import { ApplicationMetadata } from '../../core/application-metadata';
 
 @Component({
   selector: 'th-sidebar-nav',
@@ -14,7 +15,7 @@ export class SidebarNavComponent implements OnInit {
   public menuTitle!: string;
   public menuArray: any[] = [];
 
-  public activeItem: any;
+  public activeItem: Navigationfilter;
   constructor(private readonly applicationService: ApplicationBuilderService) { }
 
   public ngOnInit(): void {
@@ -41,9 +42,9 @@ export class SidebarNavComponent implements OnInit {
     this.loadActiveApplication(item.metadata);
   }
 
-  private loadActiveApplication(metadata: any) {
+  private loadActiveApplication(metadata: ApplicationMetadata) {
     this.applicationService
-    .loadApplication({ url: metadata.url, title: metadata.title });
+    .loadApplication(metadata);
   }
   public get submenus(): any {
     const length = this.menuArray.length;

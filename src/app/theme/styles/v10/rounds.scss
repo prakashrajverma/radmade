@@ -1,0 +1,42 @@
+.round {
+  line-height: 48px;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 100%;
+  background: #1e88e5;
+}
+
+.round img {
+  border-radius: 100%;
+}
+
+.round-lg {
+  line-height: 65px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+}
+
+.round.round-info {
+  background: #1e88e5;
+}
+
+.round.round-warning {
+  background: #ffb22b;
+}
+
+.round.round-danger {
+  background: #fc4b6c;
+}
+
+.round.round-success {
+  background: #26c6da;
+}
+
+.round.round-primary {
+  background: #7460ee;
+}

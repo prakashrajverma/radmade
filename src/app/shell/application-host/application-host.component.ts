@@ -1,6 +1,8 @@
+import { NavigationGroup, Navigationfilter } from './../core/navigation-group';
 import { Component, ViewChild, ElementRef, HostBinding, OnInit } from '@angular/core';
 import { ApplicationMetadata } from '../core/application-metadata';
 import { ApplicationBuilderService } from '../core/application-builder.service';
+import { navigation } from './../../navigation-constant';
 
 @Component({
   selector: 'th-application-host',
@@ -9,7 +11,8 @@ import { ApplicationBuilderService } from '../core/application-builder.service';
 })
 export class ApplicationHostComponent implements OnInit {
 
-  public application!: ApplicationMetadata;
+  public applications: ApplicationMetadata[] = [];
+  private activeApp: ApplicationMetadata;
 
   @ViewChild('frame') public frame: ElementRef;
   @HostBinding('style.display') display = 'flex';
@@ -18,8 +21,27 @@ export class ApplicationHostComponent implements OnInit {
   constructor(private readonly hostService: ApplicationBuilderService) { }
 
   public ngOnInit(): void {
-    this.hostService.application.subscribe((metadata: ApplicationMetadata) => {
-      this.application = metadata;
+    navigation.forEach((navG: NavigationGroup) => {
+      this.getApplicationsFromNavigationfilter(navG.navigations);
+    });
+    this.hostService.application.subscribe((id: string) => {
+      if (this.activeApp) {
+        this.activeApp.active = false;
+      }
+      this.activeApp = this.applications.find((app: ApplicationMetadata) => app.id === id);
+      if (this.activeApp) {
+        this.activeApp.active = true;
+      }
+    });
+  }
+
+  private getApplicationsFromNavigationfilter(navigations: Navigationfilter[]): void {
+    navigations.forEach((nav: Navigationfilter) => {
+      if (nav.children) {
+        this.getApplicationsFromNavigationfilter(nav.children);
+      } else {
+        this.applications.push(nav.metadata);
+      }
     });
   }
 

@@ -1,0 +1,48 @@
+#file-container {
+  border-bottom: 1px solid #ced4da !important;
+  min-height: 38px;
+}
+
+.multi-upload {
+  width: 100%;
+}
+span {
+  opacity: 0.5;
+  font-style: italic;
+}
+.btn-file {
+  position: relative;
+  padding: 0 !important;
+  z-index: 1;
+  float: right;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.btn-browse {
+  width: 99% !important;
+}
+.btn-remove {
+  color: #d52020;
+  width: 25px;
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+  right: 85px;
+  text-align: center;
+    font-weight: 500;
+    line-height: 25px;
+    font-size: 20px;
+}
+input[type="file"] {
+  position: absolute;
+  width: 95%;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+}

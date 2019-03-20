@@ -1,0 +1,14 @@
+ <input type="text" readonly [(ngModel)]="label" class="form-control"
+  placeholder="{{placeholder}}" (click)="onClick()">
+<em class="fa fa-angle" [ngClass]="{'fa-angle-down': !show, 'fa-angle-up':
+  show}"></em>
+<div class="dropdown-container">
+  <ul class="dropdown-list" *ngIf="show" (mouseleave)="onFocusOut($event)">
+    <ng-container *ngFor="let item of options">
+      <li class="dropdown-item dropdown-item-ngw"
+        (click)="onItemSelected(item)">
+        {{item.label}}
+      </li>
+    </ng-container>
+  </ul>
+</div>

@@ -1,0 +1,5 @@
+
+<input class="form-control datepicker-input" [placeholder]="format"
+  [(ngModel)]="datepicker" (ngModelChange)="onDateSelect()" ngbDatepicker #d="ngbDatepicker" (focus)="d.open()" >
+<em class="btn fa fa-calendar calendar" (click)="d.toggle()" ></em>
+

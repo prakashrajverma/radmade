@@ -1,6 +1,8 @@
-<iframe #frame
-  *ngIf="application"
-  style="height:100%; width: 100%;"
+<ng-container *ngFor="let application of applications">
+  <iframe #frame
+  [ngClass]="{'show': application.active, 'hide': !application.active}"
   offsetHeight="5"
+  [id]= "application.id"
   [src]="application?.url | safeUrl"
   [title]="application?.title"></iframe>
+</ng-container>
