@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card text-center">
+      <div *ngIf="header" class="card-header">
+        <ng-content select=[header]></ng-content>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">{{title}}</h4>
+        <div class="card-content">
+          <ng-content></ng-content>
+        </div>
+      </div>
+      <div *ngIf="footer" class="card-footer text-muted">
+        <ng-content select=[footer]></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

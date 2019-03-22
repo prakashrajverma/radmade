@@ -1,0 +1,30 @@
+<ul class="pagination">
+    <li class="page-item" [ngClass]="{'disabled': !first_active}">
+      <a title="First" class="page-link" (click)="jumpTo(1)">
+        <span aria-hidden="true">««</span>
+      </a>
+    </li>
+
+    <li class="page-item" [ngClass]="{'disabled': !previous_active}">
+      <a title="Previous" class="page-link" (click)="onPageSelect(current-1)">
+        <span aria-hidden="true">«</span>
+      </a>
+    </li>
+    <ng-container *ngFor="let page of pages">
+      <li class="page-item" [ngClass]="{'active': page === current}">
+        <a class="page-link" (click)="onPageSelect(page)">
+          {{page}}
+        </a>
+      </li>
+    </ng-container>
+    <li class="page-item" [ngClass]="{'disabled': !next_active}">
+      <a title="Next" class="page-link" (click)="onPageSelect(current+1)">
+        <span>»</span>
+      </a>
+    </li>
+    <li class="page-item" [ngClass]="{'disabled': !last_active}">
+      <a title="Last" class="page-link" (click)="jumpTo(pageCollection)">
+        <span>»»</span>
+      </a>
+    </li>
+  </ul>

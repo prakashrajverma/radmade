@@ -1,0 +1,50 @@
+cite{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.ge-card{
+  padding: 6px;
+  background-color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 400px;
+  display: inline-block;
+  color: #fff;
+  text-align: left;
+  border-width: 0;
+  border-radius: 6px;
+}
+.ge-card-block{
+  text-align: left;
+  border-radius: 6px;
+  padding: 20px 20px 1px 20px !important;
+  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+  display: block;
+  position: relative;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+}
+
+.primary{
+  color: #fff;
+  background-color: #0E76B7;
+  border-color: #004A75;
+}
+.info{
+  color: #423937;
+  background-color: #eae650;
+  border-color: #b7b32c;
+}
+.success{
+  color: #fff;
+  background-color: #348644;
+  border-color: #266232;
+}
+.danger{
+  color: #fff;
+  background-color: rgb(124, 14, 14);
+  border-color: rgb(229, 99, 99);
+}
+.tile-content {
+  font-size: 17px;
+    letter-spacing: 0.7px;
+}

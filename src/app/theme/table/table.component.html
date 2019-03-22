@@ -1,0 +1,56 @@
+<div class="full-height-vertical">
+  <th-card-group title="Service Invoice Record" [ribbon]="{ type: 'ribbon-bookmark' }">
+    <div class="entries-per-page">
+      <label *ngIf="pagination" class="form-inline d-flex justify-content-end
+        font-medium">
+        Show
+        <div class="entries-select">
+          <th-select [placeholder]="'5'" [options]="[
+          {label: '5', value: 5},
+          {label: '10', value: 10},
+          {label: '15', value: 15, selected: true},
+          {label: '20', value: 20}
+          ]"
+            [(ngModel)]="resultPerPage" (ngModelChange)="setResultsPerPage()">
+          </th-select>
+        </div>
+        entries
+      </label>
+    </div>
+    <div class="table-responsive full-height">
+      <table class="table full-height">
+        <thead>
+          <tr>
+            <th>#</th>
+            <ng-container *ngFor="let head of header">
+              <th class="pointer" (click)="onSort(head)">{{head.column}}
+                <em class="fa fa-sort ngw-sort" *ngIf="head.direction ===
+                  'NONE'"></em>
+                <em class="fa fa-sort-up ngw-sort" *ngIf="head.direction ===
+                  'ASC'"></em>
+                <em class="fa fa-sort-down ngw-sort" *ngIf="head.direction ===
+                  'DESC'"></em>
+              </th>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody class="full-height">
+          <ng-container *ngFor="let item of result; let i= index">
+            <tr>
+              <td>{{start + i + 1}}</td>
+              <ng-container *ngFor="let prop of properties">
+                <td [innerHTML]="item[prop] | safeHtml"></td>
+              </ng-container>
+            </tr>
+          </ng-container>
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination">
+        <th-pagination *ngIf="pagination" class="d-flex justify-content-end"
+        [pageCollection]="pageCollection" [maxSize]="pagination"
+        (pageChange)="onPageChange($event)"></th-pagination>
+    </div>
+  </th-card-group>
+</div>

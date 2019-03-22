@@ -1,6 +1,6 @@
-import { ISelectOptions } from './../select/select.component';
 import { Component, OnInit, Input } from '@angular/core';
 import { ValueAccessorBase } from '../../value-accessor-base';
+import { ISelectOptions } from '../../shared/select-options';
 
 @Component({
   selector: 'th-multi-select',
@@ -11,7 +11,7 @@ export class MultiSelectComponent  extends ValueAccessorBase<any> implements OnI
   value = [];
   show;
   @Input() placeholder;
-  @Input() options: ISelectOptions;
+  @Input() options: ISelectOptions[];
   optionSelected;
   private itemSelect: any[] = [];
   constructor() { super(); }

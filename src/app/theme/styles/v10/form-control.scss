@@ -7,6 +7,7 @@
   display: initial;
   border: 0;
   border-radius: 0;
+  width: -webkit-fill-available !important;
   letter-spacing: 0.7px;
   border-bottom: 1px solid #ced4da;
   transition: border-color ease-in-out 0.2s;
@@ -28,7 +29,7 @@
 }
 
 .custom-control-input:checked ~ .custom-control-indicator {
-  background-color: #26c6da;
+  background-color: #333;
 }
 
 form label {

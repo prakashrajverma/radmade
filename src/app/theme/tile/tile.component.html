@@ -1,0 +1,14 @@
+<div class="card ge-card">
+    <div class="card-block ge-card-block" [ngClass]="type">
+        <blockquote class="card-blockquote">
+        <div class="row">
+            <div class="col-md-2">
+                <em class="fa-2x" [ngClass]="icon"></em>
+            </div>
+            <div class="col-md-10 tile-content">
+              <ng-content></ng-content>
+            </div>
+        </div>
+        </blockquote>
+    </div>
+  </div>

@@ -1,9 +1,9 @@
 <div class="form-group">
-  <th-input></th-input>
+  <th-input [placeholder]="'Username'"></th-input>
 </div>
 <div class="form-group">
-    <th-input type="password"></th-input>
-  </div>
+  <th-input type="password" [placeholder]="'Password'"></th-input>
+</div>
 <div class="form-group">
   <th-datepicker></th-datepicker>
 </div>
@@ -12,7 +12,7 @@
 </div>
 
 <div class="form-group">
-    <th-select [placeholder]="'< -- select country -- >'" [options]="select_group" [(ngModel)]="select">
+  <th-select [placeholder]="'<-- select country -- >'" [options]="select_group" [(ngModel)]="select">
     </th-select>
 </div>
 
@@ -22,5 +22,23 @@
 </div>
 <div class="form-group">
     <th-checkbox [label]="'Remember me'" [(ngModel)]="checkbox" ></th-checkbox>
+</div>
+<div class="form-group">
+  <th-radio [options]="radio_group" [(ngModel)]="radio"></th-radio>
+</div>
+<div class="form-group">
+  <th-switch [label]="'Dark backgroud'" [(ngModel)]="switch"></th-switch>
+</div>
+<div class="form-group">
+  <th-progressbar [color]="'#14a417'" [progress]="'35'"></th-progressbar>
+</div>
+<div class="form-group">
+    <th-tile [icon]="'fa fa-check-circle'" [type]="'success'">Item added to cart.</th-tile>
+    <th-tile [icon]="'fa fa-times-circle'" [type]="'danger'">Error: File upload failed.</th-tile>
+    <th-tile [icon]="'fa fa-info-circle'" [type]="'info'">Warning: Email not provided!</th-tile>
   </div>
-{{value}}
+  <div class="form-group">
+          <th-table class="table-striped table-bordered table-hover"
+          [pagination]="10"
+          [head]="table_head" [body]="table_body"></th-table>
+    </div>

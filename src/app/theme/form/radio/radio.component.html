@@ -1,0 +1,8 @@
+
+<ng-container ngDefaultControl [(ngModel)]="value" *ngFor="let option of
+  options">
+  <input class="radio-col-blue" name="group4" type="radio" id="{{option.value}}"
+    [checked]="value && value.value === option.value"
+    (click)="radioChecked(option)">
+  <label for="{{option.value}}">{{option.label}}</label>
+</ng-container>

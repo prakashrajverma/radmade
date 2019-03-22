@@ -1,0 +1,14 @@
+<div class="row full-height">
+    <div class="col-md-12 full-height">
+      <div class="ribbon-wrapper card text-center full-height">
+        <div class="ribbon" ngClass="{{ribbon.type}} {{ribbon.class}} {{ribbon.position}}">
+          <em *ngIf="ribbon.icon" class="fa" ngClass="{{ribbon.icon}}"></em>
+          {{title}}</div>
+        <div class="card-body full-height">
+          <div class="card-content full-height">
+            <ng-content></ng-content>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
